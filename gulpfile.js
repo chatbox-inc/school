@@ -18,6 +18,7 @@ var tasks = {};
     "sass",
     "jade",
     "webpack",
+    "browserSync",
     //"wintersmith"
 ].forEach((taskName) => {
     tasks[taskName] = require(`./frontend/libs/gulp/${taskName}.js`)({src,dest})
