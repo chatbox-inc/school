@@ -1,3 +1,336 @@
-*{
-  color: red;
+@import "lib/_mixin";
+@import "lib/_value";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+ul, menu, dir, dd, dt {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+li {
+  list-style: none;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: $clr-txt-d;
+  line-height: 1.8em;
+  font-weight: normal;
+  font-family: "Noto Sans Japanese","游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif;
+
+  a {
+    color: $clr-sub;
+    text-decoration: none;
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  a.reset {
+    color: inherit;
+  }
+  hr {
+    border-style: solid;
+  }
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+section.heroBlock {
+  width: 100%;
+  height: 950px;
+  color: #fff;
+  background: url("./../../img/main.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  .catchcopy {
+    margin: 0 auto;
+    display: inline-block;
+    width:100%;
+    font-size: 2.3em;
+    font-weight: bold;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","游ゴシック", "YuGothic";
+    line-height: 2em;
+    p {
+      display: inline-block;
+      text-align: left;
+    }
+
+  }
+
+  .read {
+    display: inline-block;
+    max-width: 320px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 2em;
+
+  }
+
+  .price {
+    width: 100%;
+  }
+  ul.plice-list {
+    @include price-decagon;
+  }
+  .btn-entry {
+    border: 1px solid #fff;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    a{
+      display: inline-block;
+      padding: 1.5em 6em;
+      color: #fff;
+      font-size: 1.3em;
+      letter-spacing: .1em;
+    }
+
+  }
+
+}//heroBlock
+section.infoBlock {
+  @include section-common;
+  .heading {
+    text-align: center;
+  }
+  .sec-title {
+    font-size: 1.8em;
+    @include section-titile(100px,480px);
+  }
+  .read {
+    margin-top: -5px;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    line-height: 2.3em;
+    span {
+      margin: 0 .2em;
+      padding: .2em .5em;
+      background: $clr-accent;
+    }
+  }
+  .sales-points {
+    text-align: center;
+    .point {
+      display: inline-block;
+      vertical-align: top;
+      margin: 30px;
+      width: 280px;
+    }
+    .point-title {
+      margin-bottom: 1.2em;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .point-detail{
+      color: $clr-txt-l;
+    }
+    .point-detail1 {
+      @include point-bg(1);
+    }
+    .point-detail2 {
+      @include point-bg(2);
+    }
+    .point-detail3 {
+      @include point-bg(3);
+    }
+
+  }
+}//infoBlock
+section.curriculumBlock {
+  padding-bottom: 2em;
+  @include section-common;
+  text-align: center;
+  background: url("./../../img/bg.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  .sec-title {
+    font-size: 1.2em;
+    @include section-titile(70px);
+  }
+  .stepBlock {
+    @include section-common;
+  }
+  .step {
+    display: inline-block;
+    padding: 0 15px;
+    width:320px;
+    height: 300px;
+    vertical-align: top;
+    ul.step-list {
+      @include step-decagon(300px);
+    }
+  }
+  .teacherBlock {
+    margin: 50px auto 50px;
+    padding: 0 2em 1em;
+    max-width: 800px;
+    background: rgba(255,255,255,.7);
+    .sec-title {
+      font-size: 1em;
+      @include section-titile(60px);
+    }
+    .icon {
+      margin-right: 2em;
+      display: inline-block;
+      #hexagon {
+        @include hexagon;
+      }
+    }
+
+    .description {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      text-align: left;
+      .title {
+        font-weight: bold;
+      }
+    }
+  }
+}//curriculumBlock
+section.detailBlock {
+  @include section-common;
+    text-align: center;
+    width: 100%;
+    .detail {
+      padding: 0 60px;
+      text-align: left;
+      margin-top: -10px;
+    }
+    .term {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10%;
+      width:280px;
+      .sec-title {
+        font-size: 1em;
+        @include section-titile(60px)
+      }
+    }
+    .price {
+      display: inline-block;
+      vertical-align: top;
+      width:280px;
+      .sec-title {
+        font-size: 1em;
+        @include section-titile(60px);
+      }
+  }
+}//detailBlock
+section.attentionBlock {
+  text-align: center;
+  background: $clr-gray;
+  .sec-title {
+    font-size: 1em;
+    @include section-titile(60px);
+  }
+  .icon {
+    display: inline-block;
+    width: 20%;
+  }
+  ul.attention-list {
+    @include attention-decagon(150px);
+    i{
+      font-size: 65px;
+    }
+  }
+  .description {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: left;
+    .title {
+      font-weight: bold;
+    }
+  }
+
+
+}//attentionBlock
+
+section.accessBlock {
+  padding-top: 60px;
+  @include section-common;
+  text-align: center;
+
+  h2.sec-title {
+    font-size: 1em;
+    @include section-titile(60px);
+  }
+  .container {
+    height: 450px;
+  }
+  .logo {
+    padding: 60px 0 20px;
+    width: 40%;
+    height: auto;
+  }
+  .management{
+    display: inline-block;
+    vertical-align: top;
+    width:280px;
+    height: 100%;
+  }
+  .map{
+    display: inline-block;
+    vertical-align: top;
+    width:550px;
+    height: 100%;
+    text-align: left;
+
+  }
+  #gmap {
+    height: 350px;
+    iframe {
+      pointer-events: none;
+    }
+  }
+
+}//accessBlock
+
+section.entryBlock {
+  text-align: center;
+  background: url("./../../img/bg.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  .sec-title {
+    font-size: 1.2em;
+    @include section-titile(70px);
+  }
+  .price {
+    width: 100%;
+  }
+  ul.plice-list {
+    @include price-decagon;
+  }
+  .btn-entry {
+    display: inline-block;
+    margin-bottom: 100px;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,.5);
+    a{
+      display: inline-block;
+      padding: 1.5em 6em;
+      color: #fff;
+      font-size: 1.3em;
+      letter-spacing: .1em;
+    }
+
+  }
+}//entryBlock
+
+footer {
+  background: $clr-gray;
+  text-align: center;
+  small {
+    color: $clr-sub;
+  }
 }

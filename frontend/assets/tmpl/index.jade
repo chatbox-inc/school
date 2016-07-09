@@ -1,4 +1,215 @@
 doctype html
 html
   include _head
+    .container
 body
+  section.heroBlock
+    .container
+      .catchcopy
+        p これからの私は、
+          br
+          | 仕事もミライも、
+          br
+          | 自分でつくる。
+
+      .read
+        span ０から学べるWeb制作セミナーで、
+          br
+          | 発信できる自分へ
+          br
+          | 就活でもオシゴトでも役立つ
+          br
+          | 自分のためのスキルアップ
+
+      .price
+        ul.plice-list
+          li.lists
+            .textarea
+              span 社会人
+              hr
+              p 150000 円
+            .decagon
+              - var i = 5;
+              while i--
+                div.rect
+          li.lists
+            .textarea
+              span 学生
+              hr
+              p 150000 円
+            .decagon
+              - var i = 5;
+              while i--
+                div.rect
+
+      .btn-entry
+          a(href="")
+           | 参加申し込み
+
+  section.infoBlock
+    .heading
+      .container
+        h1.sec-title chatbox.school この秋 開校
+        p.read
+          span 転職を目指す社会人の方
+          | や
+          span Web業界の即戦力を目指す学生さん
+          | にぴったりのWeb制作基礎講座。
+          br
+          | 現場で通用するスキルを身につけた即戦力のクリエイターを養成するためのITスクールです。
+    .sales-points
+      .container
+        .point
+          dl
+            dt.point-title Web制作の基礎を実際の業務の流れに沿って学ぶ
+            dd.point-detail.point-detail1 Web制作とスクールを行うchatboxだから出来る、実際の業務に沿ったWeb制作指導。現場で実際に役立つ基礎が身につくため、卒業後のスキルアップもスムーズです。定期的に開催されるスキルアップ講座と合わせて、基礎の枠を越えたプロフェッショナルなスキルを身に着けていく事も可能です。
+        .point
+          dl
+            dt.point-title 学ぶだけでなく作る卒業制作で自分だけのWebサイト
+            dd.point-detail.point-detail2 単に学ぶだけの授業でなく、作る事に重点をおいたカリキュラムで、３ヶ月で自分だけのブログサイト構築を可能にします。学習の成果だけでなく、目に見える制作物を持って就活に挑めば、他のライバルに大きな差をつけることが出来ます！
+        .point
+          dl
+            dt.point-title 高品質・低価格スキルアップ出来る環境での授業
+            dd.point-detail.point-detail3 Web制作とセミナーを行うchatboxならではの充実のサポート。セミナー開催経験豊富な現役クリエイターが講師を担当します。日々のスキルアップに重点を置くchatboxの環境で、卒業後のフォローもしっかりサポートします。
+  section.curriculumBlock
+    h2.sec-title カリキュラム
+    .container
+      .stepBlock
+        .step
+          ul.step-list
+            li.lists
+              .textarea
+                span.nmb 01
+                span フライヤー模写
+                  br
+                  | 静的Webサイト制作
+                hr
+                p お気に入りのフライヤーの模写を通じて、photoshopの使い方、HTMLとCSSの基礎が学べます。
+              .decagon
+                - var i = 5;
+                while i--
+                  div.rect
+
+        .step
+          ul.step-list
+            li.lists
+              .textarea
+                span.nmb 02
+                span jQueryとサイト構築
+                  br
+                  | レスポンシブサイト構築
+                hr
+                p 本格的なWebサイト制作で必須となるjQueryを使ったサイト構築や、レスポンシブによるスマホ対応の方法を学びます。
+              .decagon
+                - var i = 5;
+                while i--
+                  div.rect
+        .step
+          ul.step-list
+            li.lists
+              .textarea
+                span.nmb 03
+                span WordPressによる
+                  br
+                  | ブログサイトの作成
+                hr
+                p Wordpressを使ったブログサイト構築で、複数ページサイトの本格運用のノウハウ獲得を目指します。
+              .decagon
+                - var i = 5;
+                while i--
+                  div.rect
+      .teacherBlock
+        .container
+          h3.sec-title 講師紹介
+          .container
+            ul
+              li.attention
+                .icon
+                  #hexagon
+                    .hexTop
+                    .hexBottom
+                .description
+                  p.title 後藤 知宏
+                  p.detail 株式会社chatbox代表。教育系の事業に力を入れており、自社主催のセミナー「Lec Cafe」や専門学校等の招待講師として教鞭を取る場面も。
+
+  section.detailBlock
+    .container
+      .term
+        h2.sec-title 開催期間
+        p.detail 9月、10月、11月の３ヶ月間
+          br
+          | 毎週 火曜・木曜（ 週２回 ）
+          | 20:00-22:30
+
+      .price
+        h2.sec-title 料金
+        p.detail 学生　：111,111円
+          br
+          | 社会人：111,111円
+  section.attentionBlock
+      h3.sec-title 諸注意
+      .container
+        ul
+          li.attention
+            .icon
+              ul.attention-list
+                li.lists
+                  .textarea
+                    span
+                      i(class="fa fa-laptop" aria-hidden="true")
+                  .decagon
+                    - var i = 5;
+                    while i--
+                      div.rect
+            .description
+              p.title ソフトウェアインストール済みのノートパソコン
+              p.detail ※デスクトップパソコンしかお持ちでない方向けに貸し出しのノートPC（有料：１万円）もございます。ご希望の方は申込の際にご連絡ください。但し貸し出しはスクール内のみとなるので、自宅に卒業制作などを作業できるPCをお持ちの方に限ります。
+
+  section.accessBlock
+    h2.sec-title アクセス
+    .container
+      .management
+        img.logo(src="./../../img/logo.png")
+        .about
+          h4 株式会社 chatbox
+          p 〒541-0048
+            br
+            | 大阪府大阪市中央区瓦町3-2-10
+            br
+            |エスティメゾン瓦町 805
+      .map
+        #gmap
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.04761995916758!2d135.5030604044094!3d34.685957813233024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6e1c454c2b3%3A0x6a85b3c24a63bb5d!2z44CSNTQxLTAwNDgg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy655Om55S677yT5LiB55uu77ySIOOCqOOCueODhuOCo-ODoeOCvuODs-eTpueUug!5e0!3m2!1sja!2sjp!4v1468051632295" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        p 大阪地下鉄御堂筋線「本町」駅より徒歩5分
+          br
+          | 京阪電車「淀屋橋」駅より徒歩10分〒541-0048
+
+  section.entryBlock
+    .container
+      h3.sec-title 参加申込み
+      .price
+        ul.plice-list
+          li.lists
+            .textarea
+              span 社会人
+              hr
+              p 150000 円
+            .decagon
+              - var i = 5;
+              while i--
+                div.rect
+          li.lists
+            .textarea
+              span 学生
+              hr
+              p 150000 円
+            .decagon
+              - var i = 5;
+              while i--
+                div.rect
+
+        .btn-entry
+          a(href="")
+            | 参加申し込み
+  footer
+    small Copyright © chatbox-inc All Rights Reserved.

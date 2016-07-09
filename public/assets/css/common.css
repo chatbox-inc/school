@@ -1,2 +1,794 @@
-* {
-  color: red; }
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+ul, menu, dir, dd, dt {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0; }
+
+li {
+  list-style: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: #646887;
+  line-height: 1.8em;
+  font-weight: normal;
+  font-family: "Noto Sans Japanese","游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif; }
+  html a, body a {
+    color: #69bed4;
+    text-decoration: none; }
+    html a:hover, body a:hover {
+      opacity: .5; }
+  html a.reset, body a.reset {
+    color: inherit; }
+  html hr, body hr {
+    border-style: solid; }
+  html .container, body .container {
+    max-width: 1500px;
+    margin: 0 auto; }
+
+section.heroBlock {
+  width: 100%;
+  height: 950px;
+  color: #fff;
+  background: url("./../../img/main.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+  section.heroBlock .catchcopy {
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.3em;
+    font-weight: bold;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","游ゴシック", "YuGothic";
+    line-height: 2em; }
+    section.heroBlock .catchcopy p {
+      display: inline-block;
+      text-align: left; }
+  section.heroBlock .read {
+    display: inline-block;
+    max-width: 320px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 2em; }
+  section.heroBlock .price {
+    width: 100%; }
+  section.heroBlock ul.plice-list .lists,
+  section.heroBlock ul.plice-list .lists--odd {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    min-width: 252px;
+    height: 315px; }
+    section.heroBlock ul.plice-list .lists .textarea,
+    section.heroBlock ul.plice-list .lists--odd .textarea {
+      color: #fff;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      section.heroBlock ul.plice-list .lists .textarea span,
+      section.heroBlock ul.plice-list .lists--odd .textarea span {
+        margin-bottom: .7em;
+        display: block;
+        font-size: 1.3em;
+        font-weight: bold; }
+      section.heroBlock ul.plice-list .lists .textarea p,
+      section.heroBlock ul.plice-list .lists--odd .textarea p {
+        font-size: 1.6em; }
+  section.heroBlock ul.plice-list .decagon {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    section.heroBlock ul.plice-list .decagon .rect {
+      background: #eaf5f5;
+      transform-origin: center center;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-left: none;
+      border-right: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  section.heroBlock ul.plice-list .lists--odd .rect {
+    background: transparent; }
+  section.heroBlock ul.plice-list .decagon {
+    opacity: .5; }
+    section.heroBlock ul.plice-list .decagon .rect {
+      width: 32.491969623%;
+      height: 100%; }
+      section.heroBlock ul.plice-list .decagon .rect:nth-of-type(1) {
+        transform: rotate(0deg); }
+      section.heroBlock ul.plice-list .decagon .rect:nth-of-type(2) {
+        transform: rotate(36deg); }
+      section.heroBlock ul.plice-list .decagon .rect:nth-of-type(3) {
+        transform: rotate(72deg); }
+      section.heroBlock ul.plice-list .decagon .rect:nth-of-type(4) {
+        transform: rotate(108deg); }
+      section.heroBlock ul.plice-list .decagon .rect:nth-of-type(5) {
+        transform: rotate(144deg); }
+  section.heroBlock .btn-entry {
+    border: 1px solid #fff;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5); }
+    section.heroBlock .btn-entry a {
+      display: inline-block;
+      padding: 1.5em 6em;
+      color: #fff;
+      font-size: 1.3em;
+      letter-spacing: .1em; }
+
+section.infoBlock {
+  margin-bottom: 100px; }
+  section.infoBlock .heading {
+    text-align: center; }
+  section.infoBlock .sec-title {
+    font-size: 1.8em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 50px;
+    width: 480px;
+    min-width: 250px;
+    height: 100px;
+    line-height: 100px;
+    background: #eaf5f5;
+    position: relative;
+    top: -50px; }
+    section.infoBlock .sec-title::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      border-style: solid;
+      border-width: 50px 50px 50px 0;
+      border-color: transparent #eaf5f5 transparent transparent; }
+    section.infoBlock .sec-title::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -50px;
+      border-style: solid;
+      border-width: 50px 0 50px 50px;
+      border-color: transparent transparent transparent #eaf5f5; }
+  section.infoBlock .read {
+    margin-top: -5px;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    line-height: 2.3em; }
+    section.infoBlock .read span {
+      margin: 0 .2em;
+      padding: .2em .5em;
+      background: #fff33f; }
+  section.infoBlock .sales-points {
+    text-align: center; }
+    section.infoBlock .sales-points .point {
+      display: inline-block;
+      vertical-align: top;
+      margin: 30px;
+      width: 280px; }
+    section.infoBlock .sales-points .point-title {
+      margin-bottom: 1.2em;
+      font-size: 1.2em;
+      font-weight: bold; }
+    section.infoBlock .sales-points .point-detail {
+      color: #7c7f94; }
+    section.infoBlock .sales-points .point-detail1 {
+      background: url("./../../img/point1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 55%; }
+    section.infoBlock .sales-points .point-detail2 {
+      background: url("./../../img/point2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 55%; }
+    section.infoBlock .sales-points .point-detail3 {
+      background: url("./../../img/point3.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 55%; }
+
+section.curriculumBlock {
+  padding-bottom: 2em;
+  margin-bottom: 100px;
+  text-align: center;
+  background: url("./../../img/bg.png");
+  background-repeat: repeat-y;
+  background-size: cover; }
+  section.curriculumBlock .sec-title {
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 35px;
+    width: 280px;
+    min-width: 250px;
+    height: 70px;
+    line-height: 70px;
+    background: #eaf5f5;
+    position: relative;
+    top: -35px; }
+    section.curriculumBlock .sec-title::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: -35px;
+      border-style: solid;
+      border-width: 35px 35px 35px 0;
+      border-color: transparent #eaf5f5 transparent transparent; }
+    section.curriculumBlock .sec-title::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -35px;
+      border-style: solid;
+      border-width: 35px 0 35px 35px;
+      border-color: transparent transparent transparent #eaf5f5; }
+  section.curriculumBlock .stepBlock {
+    margin-bottom: 100px; }
+  section.curriculumBlock .step {
+    display: inline-block;
+    padding: 0 15px;
+    width: 320px;
+    height: 300px;
+    vertical-align: top; }
+    section.curriculumBlock .step ul.step-list .lists,
+    section.curriculumBlock .step ul.step-list .lists--odd {
+      position: relative;
+      display: inline-block;
+      width: 10%;
+      min-width: 360px;
+      height: 360px; }
+      section.curriculumBlock .step ul.step-list .lists .textarea,
+      section.curriculumBlock .step ul.step-list .lists--odd .textarea {
+        color: #646887;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        section.curriculumBlock .step ul.step-list .lists .textarea span.nmb,
+        section.curriculumBlock .step ul.step-list .lists--odd .textarea span.nmb {
+          opacity: .5;
+          font-size: 1.5em;
+          position: relative;
+          top: -10px; }
+        section.curriculumBlock .step ul.step-list .lists .textarea span,
+        section.curriculumBlock .step ul.step-list .lists--odd .textarea span {
+          display: block;
+          color: #69bed4;
+          font-size: 1em;
+          font-weight: bold; }
+        section.curriculumBlock .step ul.step-list .lists .textarea p,
+        section.curriculumBlock .step ul.step-list .lists--odd .textarea p {
+          text-align: left;
+          font-size: 1em;
+          line-height: 1.5em; }
+    section.curriculumBlock .step ul.step-list .decagon {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+      section.curriculumBlock .step ul.step-list .decagon .rect {
+        background: #fff;
+        transform-origin: center center;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        border-left: none;
+        border-right: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto; }
+    section.curriculumBlock .step ul.step-list .lists--odd .rect {
+      background: transparent; }
+    section.curriculumBlock .step ul.step-list .decagon .rect {
+      width: 32.491969623%;
+      height: 100%; }
+      section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(1) {
+        transform: rotate(0deg); }
+      section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(2) {
+        transform: rotate(36deg); }
+      section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(3) {
+        transform: rotate(72deg); }
+      section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(4) {
+        transform: rotate(108deg); }
+      section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(5) {
+        transform: rotate(144deg); }
+  section.curriculumBlock .teacherBlock {
+    margin: 50px auto 50px;
+    padding: 0 2em 1em;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.7); }
+    section.curriculumBlock .teacherBlock .sec-title {
+      font-size: 1em;
+      display: inline-block;
+      margin: 0;
+      padding: 0 30px;
+      width: 280px;
+      min-width: 250px;
+      height: 60px;
+      line-height: 60px;
+      background: #eaf5f5;
+      position: relative;
+      top: -30px; }
+      section.curriculumBlock .teacherBlock .sec-title::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        border-style: solid;
+        border-width: 30px 30px 30px 0;
+        border-color: transparent #eaf5f5 transparent transparent; }
+      section.curriculumBlock .teacherBlock .sec-title::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        border-style: solid;
+        border-width: 30px 0 30px 30px;
+        border-color: transparent transparent transparent #eaf5f5; }
+    section.curriculumBlock .teacherBlock .icon {
+      margin-right: 2em;
+      display: inline-block; }
+      section.curriculumBlock .teacherBlock .icon #hexagon {
+        text-align: justify;
+        position: relative;
+        width: 200px;
+        height: 115.47px;
+        margin: 57.74px 0;
+        background-image: url("./../../img/mikakane.png");
+        background-size: auto 230.9401px;
+        background-position: center;
+        /*counter transform the bg image on the caps*/ }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexTop,
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexBottom {
+          position: absolute;
+          z-index: 1;
+          width: 141.42px;
+          height: 141.42px;
+          overflow: hidden;
+          -webkit-transform: scaleY(0.5774) rotate(-45deg);
+          -ms-transform: scaleY(0.5774) rotate(-45deg);
+          transform: scaleY(0.5774) rotate(-45deg);
+          background: inherit;
+          left: 29.29px; }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexTop:after,
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexBottom:after {
+          content: "";
+          position: absolute;
+          width: 200.0000px;
+          height: 115.47005383792516px;
+          -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+          -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+          transform: rotate(45deg) scaleY(1.7321) translateY(-57.735px);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+          background: inherit; }
+        section.curriculumBlock .teacherBlock .icon #hexagon::after {
+          content: "";
+          position: absolute;
+          top: 0.0000px;
+          left: 0;
+          width: 200.0000px;
+          height: 115.4701px;
+          z-index: 2;
+          background: inherit; }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexTop {
+          top: -70.7107px; }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexTop:after {
+          background-position: center top; }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexBottom {
+          bottom: -70.7107px; }
+        section.curriculumBlock .teacherBlock .icon #hexagon .hexBottom:after {
+          background-position: center bottom; }
+    section.curriculumBlock .teacherBlock .description {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      text-align: left; }
+      section.curriculumBlock .teacherBlock .description .title {
+        font-weight: bold; }
+
+section.detailBlock {
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%; }
+  section.detailBlock .detail {
+    padding: 0 60px;
+    text-align: left;
+    margin-top: -10px; }
+  section.detailBlock .term {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10%;
+    width: 280px; }
+    section.detailBlock .term .sec-title {
+      font-size: 1em;
+      display: inline-block;
+      margin: 0;
+      padding: 0 30px;
+      width: 280px;
+      min-width: 250px;
+      height: 60px;
+      line-height: 60px;
+      background: #eaf5f5;
+      position: relative;
+      top: -30px; }
+      section.detailBlock .term .sec-title::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        border-style: solid;
+        border-width: 30px 30px 30px 0;
+        border-color: transparent #eaf5f5 transparent transparent; }
+      section.detailBlock .term .sec-title::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        border-style: solid;
+        border-width: 30px 0 30px 30px;
+        border-color: transparent transparent transparent #eaf5f5; }
+  section.detailBlock .price {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px; }
+    section.detailBlock .price .sec-title {
+      font-size: 1em;
+      display: inline-block;
+      margin: 0;
+      padding: 0 30px;
+      width: 280px;
+      min-width: 250px;
+      height: 60px;
+      line-height: 60px;
+      background: #eaf5f5;
+      position: relative;
+      top: -30px; }
+      section.detailBlock .price .sec-title::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        border-style: solid;
+        border-width: 30px 30px 30px 0;
+        border-color: transparent #eaf5f5 transparent transparent; }
+      section.detailBlock .price .sec-title::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        border-style: solid;
+        border-width: 30px 0 30px 30px;
+        border-color: transparent transparent transparent #eaf5f5; }
+
+section.attentionBlock {
+  text-align: center;
+  background: #f2f5f7; }
+  section.attentionBlock .sec-title {
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 30px;
+    width: 280px;
+    min-width: 250px;
+    height: 60px;
+    line-height: 60px;
+    background: #eaf5f5;
+    position: relative;
+    top: -30px; }
+    section.attentionBlock .sec-title::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      border-style: solid;
+      border-width: 30px 30px 30px 0;
+      border-color: transparent #eaf5f5 transparent transparent; }
+    section.attentionBlock .sec-title::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      border-style: solid;
+      border-width: 30px 0 30px 30px;
+      border-color: transparent transparent transparent #eaf5f5; }
+  section.attentionBlock .icon {
+    display: inline-block;
+    width: 20%; }
+  section.attentionBlock ul.attention-list .lists,
+  section.attentionBlock ul.attention-list .lists--odd {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    min-width: 180px;
+    height: 225px; }
+    section.attentionBlock ul.attention-list .lists .textarea,
+    section.attentionBlock ul.attention-list .lists--odd .textarea {
+      color: #69bed4;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      section.attentionBlock ul.attention-list .lists .textarea span,
+      section.attentionBlock ul.attention-list .lists--odd .textarea span {
+        margin-bottom: .7em;
+        display: block;
+        font-size: 1.3em;
+        font-weight: bold; }
+      section.attentionBlock ul.attention-list .lists .textarea p,
+      section.attentionBlock ul.attention-list .lists--odd .textarea p {
+        font-size: 1.6em; }
+  section.attentionBlock ul.attention-list .decagon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    section.attentionBlock ul.attention-list .decagon .rect {
+      background: #fff;
+      transform-origin: center center;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-left: none;
+      border-right: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  section.attentionBlock ul.attention-list .lists--odd .rect {
+    background: transparent; }
+  section.attentionBlock ul.attention-list .decagon .rect {
+    width: 32.491969623%;
+    height: 100%; }
+    section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(1) {
+      transform: rotate(0deg); }
+    section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(2) {
+      transform: rotate(36deg); }
+    section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(3) {
+      transform: rotate(72deg); }
+    section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(4) {
+      transform: rotate(108deg); }
+    section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(5) {
+      transform: rotate(144deg); }
+  section.attentionBlock ul.attention-list i {
+    font-size: 65px; }
+  section.attentionBlock .description {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: left; }
+    section.attentionBlock .description .title {
+      font-weight: bold; }
+
+section.accessBlock {
+  padding-top: 60px;
+  margin-bottom: 100px;
+  text-align: center; }
+  section.accessBlock h2.sec-title {
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 30px;
+    width: 280px;
+    min-width: 250px;
+    height: 60px;
+    line-height: 60px;
+    background: #eaf5f5;
+    position: relative;
+    top: -30px; }
+    section.accessBlock h2.sec-title::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      border-style: solid;
+      border-width: 30px 30px 30px 0;
+      border-color: transparent #eaf5f5 transparent transparent; }
+    section.accessBlock h2.sec-title::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      border-style: solid;
+      border-width: 30px 0 30px 30px;
+      border-color: transparent transparent transparent #eaf5f5; }
+  section.accessBlock .container {
+    height: 450px; }
+  section.accessBlock .logo {
+    padding: 60px 0 20px;
+    width: 40%;
+    height: auto; }
+  section.accessBlock .management {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    height: 100%; }
+  section.accessBlock .map {
+    display: inline-block;
+    vertical-align: top;
+    width: 550px;
+    height: 100%;
+    text-align: left; }
+  section.accessBlock #gmap {
+    height: 350px; }
+    section.accessBlock #gmap iframe {
+      pointer-events: none; }
+
+section.entryBlock {
+  text-align: center;
+  background: url("./../../img/bg.png");
+  background-repeat: repeat-y;
+  background-size: cover; }
+  section.entryBlock .sec-title {
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 35px;
+    width: 280px;
+    min-width: 250px;
+    height: 70px;
+    line-height: 70px;
+    background: #eaf5f5;
+    position: relative;
+    top: -35px; }
+    section.entryBlock .sec-title::before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: -35px;
+      border-style: solid;
+      border-width: 35px 35px 35px 0;
+      border-color: transparent #eaf5f5 transparent transparent; }
+    section.entryBlock .sec-title::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: -35px;
+      border-style: solid;
+      border-width: 35px 0 35px 35px;
+      border-color: transparent transparent transparent #eaf5f5; }
+  section.entryBlock .price {
+    width: 100%; }
+  section.entryBlock ul.plice-list .lists,
+  section.entryBlock ul.plice-list .lists--odd {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    min-width: 252px;
+    height: 315px; }
+    section.entryBlock ul.plice-list .lists .textarea,
+    section.entryBlock ul.plice-list .lists--odd .textarea {
+      color: #fff;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      section.entryBlock ul.plice-list .lists .textarea span,
+      section.entryBlock ul.plice-list .lists--odd .textarea span {
+        margin-bottom: .7em;
+        display: block;
+        font-size: 1.3em;
+        font-weight: bold; }
+      section.entryBlock ul.plice-list .lists .textarea p,
+      section.entryBlock ul.plice-list .lists--odd .textarea p {
+        font-size: 1.6em; }
+  section.entryBlock ul.plice-list .decagon {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    section.entryBlock ul.plice-list .decagon .rect {
+      background: #eaf5f5;
+      transform-origin: center center;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-left: none;
+      border-right: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  section.entryBlock ul.plice-list .lists--odd .rect {
+    background: transparent; }
+  section.entryBlock ul.plice-list .decagon {
+    opacity: .5; }
+    section.entryBlock ul.plice-list .decagon .rect {
+      width: 32.491969623%;
+      height: 100%; }
+      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(1) {
+        transform: rotate(0deg); }
+      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(2) {
+        transform: rotate(36deg); }
+      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(3) {
+        transform: rotate(72deg); }
+      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(4) {
+        transform: rotate(108deg); }
+      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(5) {
+        transform: rotate(144deg); }
+  section.entryBlock .btn-entry {
+    display: inline-block;
+    margin-bottom: 100px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.5); }
+    section.entryBlock .btn-entry a {
+      display: inline-block;
+      padding: 1.5em 6em;
+      color: #fff;
+      font-size: 1.3em;
+      letter-spacing: .1em; }
+
+footer {
+  background: #f2f5f7;
+  text-align: center; }
+  footer small {
+    color: #69bed4; }
