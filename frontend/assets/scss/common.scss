@@ -1,6 +1,5 @@
 @import "lib/_mixin";
 @import "lib/_value";
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 ul, menu, dir, dd, dt {
   display: block;
@@ -21,8 +20,7 @@ html, body {
   color: $clr-txt-d;
   line-height: 1.8em;
   font-weight: normal;
-  font-family: "Noto Sans Japanese","游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif;
-
+  font-family: "游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif;
   a {
     color: $clr-sub;
     text-decoration: none;
@@ -40,6 +38,9 @@ html, body {
   .container {
     max-width: 1500px;
     margin: 0 auto;
+    @include mediaTB {
+      max-width: 810px;
+    }
   }
 }
 
@@ -51,6 +52,11 @@ section.heroBlock {
   background-size: cover;
   background-position: center;
   text-align: center;
+
+  @include mediaSP {
+    padding-bottom: 100px;
+    height: auto;
+  }
 
   .catchcopy {
     margin: 0 auto;
@@ -73,7 +79,9 @@ section.heroBlock {
     text-align: left;
     font-size: 1.1em;
     line-height: 2em;
-
+    @include mediaSP {
+      margin-bottom: 50px;
+    }
   }
 
   .price {
@@ -81,6 +89,11 @@ section.heroBlock {
   }
   ul.plice-list {
     @include price-decagon;
+    @include mediaSP {
+      .lists {
+        height: 230px;
+      }
+    }
   }
   .btn-entry {
     border: 1px solid #fff;
@@ -93,18 +106,39 @@ section.heroBlock {
       font-size: 1.3em;
       letter-spacing: .1em;
     }
+    @include mediaSP {
+      margin-top: 30px;
+      a{
+        padding:1.5em 3em;
+      }
+    }
 
   }
 
 }//heroBlock
 section.infoBlock {
   @include section-common;
+
   .heading {
     text-align: center;
   }
-  .sec-title {
+  .sec-title.sp-none {
     font-size: 1.8em;
     @include section-titile(100px,480px);
+    @include mediaSP {
+      display: none;
+    }
+  }
+  .sec-title.pc-none {
+    display: none;
+    margin-top: 0;
+    padding: .8em;
+    font-size: 1.7em;
+    line-height: 1.8em;
+    background: $clr-base;
+    @include mediaSP {
+      display: block;
+    }
   }
   .read {
     margin-top: -5px;
@@ -116,6 +150,10 @@ section.infoBlock {
       padding: .2em .5em;
       background: $clr-accent;
     }
+    @include mediaSP {
+      padding: 1em;
+      text-align: left;
+    }
   }
   .sales-points {
     text-align: center;
@@ -124,6 +162,11 @@ section.infoBlock {
       vertical-align: top;
       margin: 30px;
       width: 280px;
+      @include mediaSP {
+        margin: 0;
+        margin-bottom: 30px;
+        width: 90%;
+      }
     }
     .point-title {
       margin-bottom: 1.2em;
@@ -168,6 +211,11 @@ section.curriculumBlock {
     ul.step-list {
       @include step-decagon(300px);
     }
+    @include mediaSP{
+      padding: 0;
+      width:100%;
+      margin-bottom: 50px;
+    }
   }
   .teacherBlock {
     margin: 50px auto 50px;
@@ -176,7 +224,7 @@ section.curriculumBlock {
     background: rgba(255,255,255,.7);
     .sec-title {
       font-size: 1em;
-      @include section-titile(60px);
+      @include common-section-titile(60px,200px);
     }
     .icon {
       margin-right: 2em;
@@ -213,7 +261,20 @@ section.detailBlock {
       width:280px;
       .sec-title {
         font-size: 1em;
-        @include section-titile(60px)
+        @include common-section-titile(60px,200px);
+      }
+      @include mediaTB {
+        margin-right: 0;
+        margin-bottom: 100px;
+        display: block;
+        width: auto;
+        .detail {
+          text-align: center;
+        }
+      }
+      @include mediaSP {
+        margin-right: 0;
+        margin-bottom: 100px;
       }
     }
     .price {
@@ -222,11 +283,21 @@ section.detailBlock {
       width:280px;
       .sec-title {
         font-size: 1em;
-        @include section-titile(60px);
+        @include common-section-titile(60px,200px);
       }
-  }
+      @include mediaTB {
+        margin-bottom: 100px;
+        display: block;
+        width: auto;
+        .detail {
+          text-align: center;
+        }
+      }
+    }
 }//detailBlock
 section.attentionBlock {
+  margin-bottom: 50px;
+  padding-bottom: 80px;
   text-align: center;
   background: $clr-gray;
   .sec-title {
@@ -236,6 +307,14 @@ section.attentionBlock {
   .icon {
     display: inline-block;
     width: 20%;
+    @include mediaTB{
+      display: block;
+      width: 100%;
+    }
+    @include mediaSP{
+      display: block;
+      width: 100%;
+    }
   }
   ul.attention-list {
     @include attention-decagon(150px);
@@ -267,6 +346,12 @@ section.accessBlock {
   }
   .container {
     height: 450px;
+    @include mediaTB{
+      height: auto;
+    }
+    @include mediaSP{
+      height: auto;
+    }
   }
   .logo {
     padding: 60px 0 20px;
@@ -278,6 +363,12 @@ section.accessBlock {
     vertical-align: top;
     width:280px;
     height: 100%;
+    @include mediaTB {
+      width: auto;
+    }
+    @include mediaSP {
+      width: auto;
+    }
   }
   .map{
     display: inline-block;
@@ -285,7 +376,12 @@ section.accessBlock {
     width:550px;
     height: 100%;
     text-align: left;
-
+    @include mediaTB {
+      width: 600px;
+    }
+    @include mediaSP {
+      width: auto;
+    }
   }
   #gmap {
     height: 350px;
@@ -310,6 +406,11 @@ section.entryBlock {
   }
   ul.plice-list {
     @include price-decagon;
+    @include mediaSP {
+      .lists {
+        height: 230px;
+      }
+    }
   }
   .btn-entry {
     display: inline-block;
@@ -322,6 +423,12 @@ section.entryBlock {
       color: #fff;
       font-size: 1.3em;
       letter-spacing: .1em;
+    }
+    @include mediaSP {
+      margin-top: 30px;
+      a{
+        padding:1.5em 3em;
+      }
     }
 
   }

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 ul, menu, dir, dd, dt {
   display: block;
   list-style-type: disc;
@@ -19,7 +18,7 @@ html, body {
   color: #646887;
   line-height: 1.8em;
   font-weight: normal;
-  font-family: "Noto Sans Japanese","游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif; }
+  font-family: "游ゴシック", "YuGothic","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","MS Pゴシック","MS P Gothic",sans-serif; }
   html a, body a {
     color: #69bed4;
     text-decoration: none; }
@@ -32,6 +31,9 @@ html, body {
   html .container, body .container {
     max-width: 1500px;
     margin: 0 auto; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      html .container, body .container {
+        max-width: 810px; } }
 
 section.heroBlock {
   width: 100%;
@@ -41,6 +43,10 @@ section.heroBlock {
   background-size: cover;
   background-position: center;
   text-align: center; }
+  @media screen and (min-width: 300px) and (max-width: 710px) {
+    section.heroBlock {
+      padding-bottom: 100px;
+      height: auto; } }
   section.heroBlock .catchcopy {
     margin: 0 auto;
     display: inline-block;
@@ -58,6 +64,9 @@ section.heroBlock {
     text-align: left;
     font-size: 1.1em;
     line-height: 2em; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.heroBlock .read {
+        margin-bottom: 50px; } }
   section.heroBlock .price {
     width: 100%; }
   section.heroBlock ul.plice-list .lists,
@@ -123,6 +132,9 @@ section.heroBlock {
         transform: rotate(108deg); }
       section.heroBlock ul.plice-list .decagon .rect:nth-of-type(5) {
         transform: rotate(144deg); }
+  @media screen and (min-width: 300px) and (max-width: 710px) {
+    section.heroBlock ul.plice-list .lists {
+      height: 230px; } }
   section.heroBlock .btn-entry {
     border: 1px solid #fff;
     display: inline-block;
@@ -133,12 +145,17 @@ section.heroBlock {
       color: #fff;
       font-size: 1.3em;
       letter-spacing: .1em; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.heroBlock .btn-entry {
+        margin-top: 30px; }
+        section.heroBlock .btn-entry a {
+          padding: 1.5em 3em; } }
 
 section.infoBlock {
   margin-bottom: 100px; }
   section.infoBlock .heading {
     text-align: center; }
-  section.infoBlock .sec-title {
+  section.infoBlock .sec-title.sp-none {
     font-size: 1.8em;
     display: inline-block;
     margin: 0;
@@ -150,7 +167,7 @@ section.infoBlock {
     background: #eaf5f5;
     position: relative;
     top: -50px; }
-    section.infoBlock .sec-title::before {
+    section.infoBlock .sec-title.sp-none::before {
       content: "";
       width: 0;
       height: 0;
@@ -160,7 +177,7 @@ section.infoBlock {
       border-style: solid;
       border-width: 50px 50px 50px 0;
       border-color: transparent #eaf5f5 transparent transparent; }
-    section.infoBlock .sec-title::after {
+    section.infoBlock .sec-title.sp-none::after {
       content: "";
       width: 0;
       height: 0;
@@ -170,6 +187,43 @@ section.infoBlock {
       border-style: solid;
       border-width: 50px 0 50px 50px;
       border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.infoBlock .sec-title.sp-none {
+        padding: 0;
+        width: 100%; }
+        section.infoBlock .sec-title.sp-none::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; }
+        section.infoBlock .sec-title.sp-none::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.infoBlock .sec-title.sp-none {
+        display: none; } }
+  section.infoBlock .sec-title.pc-none {
+    display: none;
+    margin-top: 0;
+    padding: .8em;
+    font-size: 1.7em;
+    line-height: 1.8em;
+    background: #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.infoBlock .sec-title.pc-none {
+        display: block; } }
   section.infoBlock .read {
     margin-top: -5px;
     margin-bottom: 1em;
@@ -179,6 +233,10 @@ section.infoBlock {
       margin: 0 .2em;
       padding: .2em .5em;
       background: #fff33f; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.infoBlock .read {
+        padding: 1em;
+        text-align: left; } }
   section.infoBlock .sales-points {
     text-align: center; }
     section.infoBlock .sales-points .point {
@@ -186,6 +244,11 @@ section.infoBlock {
       vertical-align: top;
       margin: 30px;
       width: 280px; }
+      @media screen and (min-width: 300px) and (max-width: 710px) {
+        section.infoBlock .sales-points .point {
+          margin: 0;
+          margin-bottom: 30px;
+          width: 90%; } }
     section.infoBlock .sales-points .point-title {
       margin-bottom: 1.2em;
       font-size: 1.2em;
@@ -247,6 +310,30 @@ section.curriculumBlock {
       border-style: solid;
       border-width: 35px 0 35px 35px;
       border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.curriculumBlock .sec-title {
+        padding: 0;
+        width: 100%; }
+        section.curriculumBlock .sec-title::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; }
+        section.curriculumBlock .sec-title::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; } }
   section.curriculumBlock .stepBlock {
     margin-bottom: 100px; }
   section.curriculumBlock .step {
@@ -262,6 +349,10 @@ section.curriculumBlock {
       width: 10%;
       min-width: 360px;
       height: 360px; }
+      @media screen and (min-width: 300px) and (max-width: 710px) {
+        section.curriculumBlock .step ul.step-list .lists,
+        section.curriculumBlock .step ul.step-list .lists--odd {
+          min-width: 100%; } }
       section.curriculumBlock .step ul.step-list .lists .textarea,
       section.curriculumBlock .step ul.step-list .lists--odd .textarea {
         color: #646887;
@@ -324,6 +415,11 @@ section.curriculumBlock {
         transform: rotate(108deg); }
       section.curriculumBlock .step ul.step-list .decagon .rect:nth-of-type(5) {
         transform: rotate(144deg); }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.curriculumBlock .step {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 50px; } }
   section.curriculumBlock .teacherBlock {
     margin: 50px auto 50px;
     padding: 0 2em 1em;
@@ -334,8 +430,8 @@ section.curriculumBlock {
       display: inline-block;
       margin: 0;
       padding: 0 30px;
-      width: 280px;
-      min-width: 250px;
+      width: 200px;
+      min-width: 150px;
       height: 60px;
       line-height: 60px;
       background: #eaf5f5;
@@ -442,8 +538,8 @@ section.detailBlock {
       display: inline-block;
       margin: 0;
       padding: 0 30px;
-      width: 280px;
-      min-width: 250px;
+      width: 200px;
+      min-width: 150px;
       height: 60px;
       line-height: 60px;
       background: #eaf5f5;
@@ -469,6 +565,18 @@ section.detailBlock {
         border-style: solid;
         border-width: 30px 0 30px 30px;
         border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.detailBlock .term {
+        margin-right: 0;
+        margin-bottom: 100px;
+        display: block;
+        width: auto; }
+        section.detailBlock .term .detail {
+          text-align: center; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.detailBlock .term {
+        margin-right: 0;
+        margin-bottom: 100px; } }
   section.detailBlock .price {
     display: inline-block;
     vertical-align: top;
@@ -478,8 +586,8 @@ section.detailBlock {
       display: inline-block;
       margin: 0;
       padding: 0 30px;
-      width: 280px;
-      min-width: 250px;
+      width: 200px;
+      min-width: 150px;
       height: 60px;
       line-height: 60px;
       background: #eaf5f5;
@@ -505,8 +613,17 @@ section.detailBlock {
         border-style: solid;
         border-width: 30px 0 30px 30px;
         border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.detailBlock .price {
+        margin-bottom: 100px;
+        display: block;
+        width: auto; }
+        section.detailBlock .price .detail {
+          text-align: center; } }
 
 section.attentionBlock {
+  margin-bottom: 50px;
+  padding-bottom: 80px;
   text-align: center;
   background: #f2f5f7; }
   section.attentionBlock .sec-title {
@@ -541,16 +658,48 @@ section.attentionBlock {
       border-style: solid;
       border-width: 30px 0 30px 30px;
       border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.attentionBlock .sec-title {
+        padding: 0;
+        width: 100%; }
+        section.attentionBlock .sec-title::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; }
+        section.attentionBlock .sec-title::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; } }
   section.attentionBlock .icon {
     display: inline-block;
     width: 20%; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.attentionBlock .icon {
+        display: block;
+        width: 100%; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.attentionBlock .icon {
+        display: block;
+        width: 100%; } }
   section.attentionBlock ul.attention-list .lists,
   section.attentionBlock ul.attention-list .lists--odd {
     position: relative;
     display: inline-block;
     width: 10%;
     min-width: 180px;
-    height: 225px; }
+    height: 150px; }
     section.attentionBlock ul.attention-list .lists .textarea,
     section.attentionBlock ul.attention-list .lists--odd .textarea {
       color: #69bed4;
@@ -651,8 +800,38 @@ section.accessBlock {
       border-style: solid;
       border-width: 30px 0 30px 30px;
       border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.accessBlock h2.sec-title {
+        padding: 0;
+        width: 100%; }
+        section.accessBlock h2.sec-title::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; }
+        section.accessBlock h2.sec-title::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; } }
   section.accessBlock .container {
     height: 450px; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.accessBlock .container {
+        height: auto; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.accessBlock .container {
+        height: auto; } }
   section.accessBlock .logo {
     padding: 60px 0 20px;
     width: 40%;
@@ -662,12 +841,24 @@ section.accessBlock {
     vertical-align: top;
     width: 280px;
     height: 100%; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.accessBlock .management {
+        width: auto; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.accessBlock .management {
+        width: auto; } }
   section.accessBlock .map {
     display: inline-block;
     vertical-align: top;
     width: 550px;
     height: 100%;
     text-align: left; }
+    @media screen and (min-width: 710px) and (max-width: 840px) {
+      section.accessBlock .map {
+        width: 600px; } }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.accessBlock .map {
+        width: auto; } }
   section.accessBlock #gmap {
     height: 350px; }
     section.accessBlock #gmap iframe {
@@ -710,6 +901,30 @@ section.entryBlock {
       border-style: solid;
       border-width: 35px 0 35px 35px;
       border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.entryBlock .sec-title {
+        padding: 0;
+        width: 100%; }
+        section.entryBlock .sec-title::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; }
+        section.entryBlock .sec-title::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-style: solid;
+          border-width: 0;
+          border-color: transparent; } }
   section.entryBlock .price {
     width: 100%; }
   section.entryBlock ul.plice-list .lists,
@@ -775,6 +990,9 @@ section.entryBlock {
         transform: rotate(108deg); }
       section.entryBlock ul.plice-list .decagon .rect:nth-of-type(5) {
         transform: rotate(144deg); }
+  @media screen and (min-width: 300px) and (max-width: 710px) {
+    section.entryBlock ul.plice-list .lists {
+      height: 230px; } }
   section.entryBlock .btn-entry {
     display: inline-block;
     margin-bottom: 100px;
@@ -786,6 +1004,11 @@ section.entryBlock {
       color: #fff;
       font-size: 1.3em;
       letter-spacing: .1em; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.entryBlock .btn-entry {
+        margin-top: 30px; }
+        section.entryBlock .btn-entry a {
+          padding: 1.5em 3em; } }
 
 footer {
   background: #f2f5f7;
