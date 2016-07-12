@@ -525,7 +525,7 @@ section.detailBlock {
   text-align: center;
   width: 100%; }
   section.detailBlock .detail {
-    padding: 0 60px;
+    padding: 0 30px;
     text-align: left;
     margin-top: -10px; }
   section.detailBlock .term {
@@ -565,6 +565,12 @@ section.detailBlock {
         border-style: solid;
         border-width: 30px 0 30px 30px;
         border-color: transparent transparent transparent #eaf5f5; }
+    section.detailBlock .term table {
+      display: inline-block;
+      text-align: left;
+      border-spacing: 10px; }
+      section.detailBlock .term table th {
+        vertical-align: top; }
     @media screen and (min-width: 710px) and (max-width: 840px) {
       section.detailBlock .term {
         margin-right: 0;
@@ -864,12 +870,12 @@ section.accessBlock {
     section.accessBlock #gmap iframe {
       pointer-events: none; }
 
-section.entryBlock {
+section#entryBlock {
   text-align: center;
   background: url("./../../img/bg.png");
   background-repeat: repeat-y;
   background-size: cover; }
-  section.entryBlock .sec-title {
+  section#entryBlock .sec-title {
     font-size: 1.2em;
     display: inline-block;
     margin: 0;
@@ -881,7 +887,7 @@ section.entryBlock {
     background: #eaf5f5;
     position: relative;
     top: -35px; }
-    section.entryBlock .sec-title::before {
+    section#entryBlock .sec-title::before {
       content: "";
       width: 0;
       height: 0;
@@ -891,7 +897,7 @@ section.entryBlock {
       border-style: solid;
       border-width: 35px 35px 35px 0;
       border-color: transparent #eaf5f5 transparent transparent; }
-    section.entryBlock .sec-title::after {
+    section#entryBlock .sec-title::after {
       content: "";
       width: 0;
       height: 0;
@@ -902,10 +908,10 @@ section.entryBlock {
       border-width: 35px 0 35px 35px;
       border-color: transparent transparent transparent #eaf5f5; }
     @media screen and (min-width: 300px) and (max-width: 710px) {
-      section.entryBlock .sec-title {
+      section#entryBlock .sec-title {
         padding: 0;
         width: 100%; }
-        section.entryBlock .sec-title::before {
+        section#entryBlock .sec-title::before {
           content: "";
           width: 0;
           height: 0;
@@ -915,7 +921,7 @@ section.entryBlock {
           border-style: solid;
           border-width: 0;
           border-color: transparent; }
-        section.entryBlock .sec-title::after {
+        section#entryBlock .sec-title::after {
           content: "";
           width: 0;
           height: 0;
@@ -925,33 +931,33 @@ section.entryBlock {
           border-style: solid;
           border-width: 0;
           border-color: transparent; } }
-  section.entryBlock .price {
+  section#entryBlock .price {
     width: 100%; }
-  section.entryBlock ul.plice-list .lists,
-  section.entryBlock ul.plice-list .lists--odd {
+  section#entryBlock ul.plice-list .lists,
+  section#entryBlock ul.plice-list .lists--odd {
     position: relative;
     display: inline-block;
     width: 10%;
     min-width: 252px;
     height: 315px; }
-    section.entryBlock ul.plice-list .lists .textarea,
-    section.entryBlock ul.plice-list .lists--odd .textarea {
+    section#entryBlock ul.plice-list .lists .textarea,
+    section#entryBlock ul.plice-list .lists--odd .textarea {
       color: #fff;
       z-index: 1;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-      section.entryBlock ul.plice-list .lists .textarea span,
-      section.entryBlock ul.plice-list .lists--odd .textarea span {
+      section#entryBlock ul.plice-list .lists .textarea span,
+      section#entryBlock ul.plice-list .lists--odd .textarea span {
         margin-bottom: .7em;
         display: block;
         font-size: 1.3em;
         font-weight: bold; }
-      section.entryBlock ul.plice-list .lists .textarea p,
-      section.entryBlock ul.plice-list .lists--odd .textarea p {
+      section#entryBlock ul.plice-list .lists .textarea p,
+      section#entryBlock ul.plice-list .lists--odd .textarea p {
         font-size: 1.6em; }
-  section.entryBlock ul.plice-list .decagon {
+  section#entryBlock ul.plice-list .decagon {
     width: 210px;
     height: 210px;
     position: absolute;
@@ -960,7 +966,7 @@ section.entryBlock {
     left: 0;
     right: 0;
     margin: auto; }
-    section.entryBlock ul.plice-list .decagon .rect {
+    section#entryBlock ul.plice-list .decagon .rect {
       background: #eaf5f5;
       transform-origin: center center;
       box-sizing: border-box;
@@ -973,42 +979,35 @@ section.entryBlock {
       left: 0;
       right: 0;
       margin: auto; }
-  section.entryBlock ul.plice-list .lists--odd .rect {
+  section#entryBlock ul.plice-list .lists--odd .rect {
     background: transparent; }
-  section.entryBlock ul.plice-list .decagon {
+  section#entryBlock ul.plice-list .decagon {
     opacity: .5; }
-    section.entryBlock ul.plice-list .decagon .rect {
+    section#entryBlock ul.plice-list .decagon .rect {
       width: 32.491969623%;
       height: 100%; }
-      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(1) {
+      section#entryBlock ul.plice-list .decagon .rect:nth-of-type(1) {
         transform: rotate(0deg); }
-      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(2) {
+      section#entryBlock ul.plice-list .decagon .rect:nth-of-type(2) {
         transform: rotate(36deg); }
-      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(3) {
+      section#entryBlock ul.plice-list .decagon .rect:nth-of-type(3) {
         transform: rotate(72deg); }
-      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(4) {
+      section#entryBlock ul.plice-list .decagon .rect:nth-of-type(4) {
         transform: rotate(108deg); }
-      section.entryBlock ul.plice-list .decagon .rect:nth-of-type(5) {
+      section#entryBlock ul.plice-list .decagon .rect:nth-of-type(5) {
         transform: rotate(144deg); }
   @media screen and (min-width: 300px) and (max-width: 710px) {
-    section.entryBlock ul.plice-list .lists {
+    section#entryBlock ul.plice-list .lists {
       height: 230px; } }
-  section.entryBlock .btn-entry {
-    display: inline-block;
-    margin-bottom: 100px;
-    border: 1px solid #fff;
-    background: rgba(0, 0, 0, 0.5); }
-    section.entryBlock .btn-entry a {
-      display: inline-block;
-      padding: 1.5em 6em;
-      color: #fff;
-      font-size: 1.3em;
-      letter-spacing: .1em; }
-    @media screen and (min-width: 300px) and (max-width: 710px) {
-      section.entryBlock .btn-entry {
-        margin-top: 30px; }
-        section.entryBlock .btn-entry a {
-          padding: 1.5em 3em; } }
+  section#entryBlock .info {
+    color: #fff; }
+    section#entryBlock .info p {
+      margin: 0; }
+    section#entryBlock .info i {
+      margin-bottom: 30px;
+      font-size: 1.2em; }
+  section#entryBlock iframe {
+    margin-bottom: 100px; }
 
 footer {
   background: #f2f5f7;

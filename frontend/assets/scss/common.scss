@@ -250,7 +250,7 @@ section.detailBlock {
     text-align: center;
     width: 100%;
     .detail {
-      padding: 0 60px;
+      padding: 0 30px;
       text-align: left;
       margin-top: -10px;
     }
@@ -262,6 +262,16 @@ section.detailBlock {
       .sec-title {
         font-size: 1em;
         @include common-section-titile(60px,200px);
+      }
+
+      table{
+        display: inline-block;
+        text-align: left;
+        border-spacing: 10px;
+        th {
+          vertical-align: top;
+        }
+
       }
       @include mediaTB {
         margin-right: 0;
@@ -392,7 +402,7 @@ section.accessBlock {
 
 }//accessBlock
 
-section.entryBlock {
+section#entryBlock {
   text-align: center;
   background: url("./../../img/bg.png");
   background-repeat: repeat-y;
@@ -412,26 +422,39 @@ section.entryBlock {
       }
     }
   }
-  .btn-entry {
-    display: inline-block;
-    margin-bottom: 100px;
-    border: 1px solid #fff;
-    background: rgba(0,0,0,.5);
-    a{
-      display: inline-block;
-      padding: 1.5em 6em;
-      color: #fff;
-      font-size: 1.3em;
-      letter-spacing: .1em;
+  //.btn-entry {
+  //  display: inline-block;
+  //  margin-bottom: 100px;
+  //  border: 1px solid #fff;
+  //  background: rgba(0,0,0,.5);
+  //  a{
+  //    display: inline-block;
+  //    padding: 1.5em 6em;
+  //    color: #fff;
+  //    font-size: 1.3em;
+  //    letter-spacing: .1em;
+  //  }
+  //  @include mediaSP {
+  //    margin-top: 30px;
+  //    a{
+  //      padding:1.5em 3em;
+  //    }
+  //  }
+  //}
+  .info {
+    color: #fff;
+    p {
+      margin: 0;
     }
-    @include mediaSP {
-      margin-top: 30px;
-      a{
-        padding:1.5em 3em;
-      }
+    i {
+      margin-bottom: 30px;
+      font-size: 1.2em;
     }
-
   }
+  iframe {
+    margin-bottom: 100px;
+  }
+
 }//entryBlock
 
 footer {
