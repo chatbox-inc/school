@@ -619,6 +619,9 @@ section.detailBlock {
         border-style: solid;
         border-width: 30px 0 30px 30px;
         border-color: transparent transparent transparent #eaf5f5; }
+    @media screen and (min-width: 840px) and (max-width: 1061px) {
+      section.detailBlock .price {
+        margin-top: 100px; } }
     @media screen and (min-width: 710px) and (max-width: 840px) {
       section.detailBlock .price {
         margin-bottom: 100px;
@@ -628,7 +631,6 @@ section.detailBlock {
           text-align: center; } }
 
 section.attentionBlock {
-  margin-bottom: 50px;
   padding-bottom: 80px;
   text-align: center;
   background: #f2f5f7; }
@@ -761,7 +763,9 @@ section.attentionBlock {
     section.attentionBlock ul.attention-list .decagon .rect:nth-of-type(5) {
       transform: rotate(144deg); }
   section.attentionBlock ul.attention-list i {
-    font-size: 65px; }
+    font-size: 50px; }
+  section.attentionBlock .attention {
+    margin-bottom: 50px; }
   section.attentionBlock .description {
     display: inline-block;
     vertical-align: top;
@@ -769,6 +773,9 @@ section.attentionBlock {
     text-align: left; }
     section.attentionBlock .description .title {
       font-weight: bold; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section.attentionBlock .description {
+        width: 80%; } }
 
 section.accessBlock {
   padding-top: 60px;
@@ -1007,7 +1014,12 @@ section#entryBlock {
       margin-bottom: 30px;
       font-size: 1.2em; }
   section#entryBlock iframe {
+    width: 450px;
+    height: 295px;
     margin-bottom: 100px; }
+    @media screen and (min-width: 300px) and (max-width: 710px) {
+      section#entryBlock iframe {
+        width: 350px; } }
 
 footer {
   background: #f2f5f7;
